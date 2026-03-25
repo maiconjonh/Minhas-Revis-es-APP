@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html class="light" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MotoMetrics Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-fixed-variant": "#354a53",
+              "on-tertiary-container": "#003357",
+              "error": "#ba1a1a",
+              "primary-fixed": "#ffdbcc",
+              "outline-variant": "#e2bfb0",
+              "on-primary": "#ffffff",
+              "error-container": "#ffdad6",
+              "surface-container-high": "#eae7e7",
+              "primary": "#a04100",
+              "background": "#fcf9f8",
+              "tertiary": "#0062a1",
+              "tertiary-fixed-dim": "#9ccaff",
+              "on-surface": "#1b1c1c",
+              "surface-variant": "#e5e2e1",
+              "tertiary-fixed": "#d0e4ff",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed-variant": "#00497b",
+              "on-tertiary-fixed": "#001d35",
+              "surface-tint": "#a04100",
+              "surface-container-low": "#f6f3f2",
+              "surface-dim": "#dcd9d9",
+              "on-secondary": "#ffffff",
+              "on-background": "#1b1c1c",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e5e2e1",
+              "on-secondary-fixed": "#071e27",
+              "secondary-container": "#cfe6f2",
+              "surface-bright": "#fcf9f8",
+              "inverse-on-surface": "#f3f0ef",
+              "on-secondary-container": "#526772",
+              "surface": "#fcf9f8",
+              "on-primary-fixed-variant": "#7a3000",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-container": "#572000",
+              "surface-container": "#f0eded",
+              "secondary-fixed": "#cfe6f2",
+              "primary-fixed-dim": "#ffb693",
+              "tertiary-container": "#059eff",
+              "outline": "#8e7164",
+              "inverse-surface": "#303030",
+              "on-surface-variant": "#5a4136",
+              "on-error": "#ffffff",
+              "primary-container": "#ff6b00",
+              "secondary-fixed-dim": "#b4cad6",
+              "inverse-primary": "#ffb693",
+              "secondary": "#4c616c",
+              "on-primary-fixed": "#351000"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Manrope"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-ignition-gradient {
+        background: linear-gradient(135deg, #a04100 0%, #ff6b00 100%);
+      }
+      .asymmetric-bleed {
+        margin-right: -1.5rem;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#fcf9f8] dark:bg-[#1b1c1c] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#ff6b00]" data-icon="settings_input_component">settings_input_component</span>
+<h1 class="font-['Space_Grotesk'] uppercase tracking-wider text-sm font-bold text-on-surface">MotoMetrics</h1>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-surface-variant">
+<img alt="Perfil do Usuário" data-alt="close-up portrait of a professional motorcycle racer in gear, sharp focus, clean studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0UJ5Kxfg3ISxUPv2yXkvK86I8BLDF2-MmYxp9Rm3Jwi_9SOCi6Z7MlgViQsCMQsHd8YQV0r2YNFGkDJLFR5mK0Tlf0U2ZrYdMa6YNGG1pcxOVhVP6xu3P3GK6smm0rvK0ZqTrqPkGV1LF1wnS1XBvcPvpnLgR3t4fbkBh8IgOnTe4A088zi4OcmS_gNcJyPF09fXXCcTOwEzk06GlVxaZDkDeA6f3snTciX66netAAdHLdHV0VWQrszYpD5aCajI4VoDzrxgfGXo"/>
+</div>
+</header>
+<main class="px-6 pt-4 space-y-8 max-w-2xl mx-auto">
+<!-- Hero Section: Bike Identity -->
+<section class="relative">
+<div class="flex flex-col gap-1">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-secondary font-bold">Máquina Atual</span>
+<h2 class="font-headline text-4xl font-bold tracking-tighter text-on-surface">TRIUMPH SPEED 400</h2>
+</div>
+<div class="mt-6 relative h-64 w-full rounded-xl overflow-hidden bg-surface-container-low">
+<img alt="Triumph Speed 400" class="w-full h-full object-cover" data-alt="A high-quality, professional studio shot of a Triumph Speed 400 motorcycle, side profile, isolated on a clean white background, modern and sleek aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUgVi3XkjPLS8NUidj4AAfntN_ncPqIVzmI8RFuTREskrXOdkciod6jPhrfk4NrMb3udRKqzTsGjgTswJfsy0-F1HF0lL9yOFOUXqHzwzotygA0mv7hcrPosACRMoADpLnlT6epube0mlupxxPDleJgUEQjroPoyuFUTrdKzDoeA9nwSngHvwV-1G3TtmGT-qmvbwI9cllF_30TNqcKMGC9QFcsCHkrrk4K06sOdl51d6x3mqAzZIotfVwCPhy3apuHUqohY35PUo"/>
+</div>
+</section>
+<!-- Quick Actions Grid -->
+<section class="grid grid-cols-2 gap-4">
+<button class="bg-ignition-gradient text-on-primary flex items-center justify-center gap-2 py-4 rounded-xl shadow-lg shadow-primary/10 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="add_circle">add_circle</span>
+<span class="font-label text-xs font-extrabold uppercase tracking-widest">Nova Revisão</span>
+</button>
+<button class="bg-surface-container-high text-on-surface flex items-center justify-center gap-2 py-4 rounded-xl active:scale-95 transition-all">
+<span class="material-symbols-outlined text-lg" data-icon="local_gas_station">local_gas_station</span>
+<span class="font-label text-xs font-extrabold uppercase tracking-widest">Abastecer</span>
+</button>
+</section>
+<!-- Maintenance Health Bento -->
+<section class="space-y-4">
+<div class="bg-surface-container-low p-6 rounded-xl relative overflow-hidden">
+<div class="flex justify-between items-start mb-8">
+<div class="space-y-1">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold">Saúde Geral</span>
+<div class="font-headline text-5xl font-extrabold text-on-surface">92<span class="text-2xl text-primary">%</span></div>
+</div>
+<div class="h-16 w-16 relative">
+<!-- Health Ring Mockup -->
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175.9" stroke-dashoffset="14" stroke-width="6"></circle>
+</svg>
+</div>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] uppercase tracking-widest font-bold">
+<span>Integridade dos Componentes</span>
+<span class="text-secondary">Ideal</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-none asymmetric-bleed">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-6 flex gap-4 overflow-x-auto pb-2 -mx-2 px-2 no-scrollbar">
+<div class="flex-shrink-0 bg-surface-container p-3 rounded-lg min-w-[120px]">
+<span class="font-label text-[9px] uppercase tracking-tighter text-secondary font-bold block mb-1">Pneus</span>
+<span class="font-headline text-lg font-bold text-on-surface">85%</span>
+</div>
+<div class="flex-shrink-0 bg-surface-container p-3 rounded-lg min-w-[120px]">
+<span class="font-label text-[9px] uppercase tracking-tighter text-secondary font-bold block mb-1">Vida do Óleo</span>
+<span class="font-headline text-lg font-bold text-on-surface">64%</span>
+</div>
+<div class="flex-shrink-0 bg-surface-container p-3 rounded-lg min-w-[120px]">
+<span class="font-label text-[9px] uppercase tracking-tighter text-secondary font-bold block mb-1">Corrente</span>
+<span class="font-headline text-lg font-bold text-on-surface">98%</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Service Anchor -->
+<section class="bg-surface-container-high/40 p-6 rounded-xl border-l-4 border-primary">
+<div class="flex justify-between items-center mb-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="event_upcoming">event_upcoming</span>
+<h3 class="font-headline text-lg font-bold uppercase tracking-tight">Próxima Revisão</h3>
+</div>
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full font-label text-[10px] font-black uppercase">Geral</span>
+</div>
+<div class="flex justify-between items-end">
+<div class="space-y-4">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold block">Data Agendada</span>
+<span class="font-headline text-2xl font-bold">14 OUT, 2024</span>
+</div>
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold block">Limite do Intervalo</span>
+<span class="font-headline text-2xl font-bold">24.000 <span class="text-sm font-label text-secondary">KM</span></span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold block">Restante</span>
+<span class="font-headline text-4xl font-bold text-primary tracking-tighter">1.240 <span class="text-xs uppercase">km</span></span>
+</div>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-5 rounded-xl">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="speed">speed</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold block mb-1">Odômetro Total</span>
+<span class="font-headline text-xl font-bold">22.760 km</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-xl">
+<span class="material-symbols-outlined text-secondary mb-3" data-icon="average_pace">avg_pace</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-secondary font-bold block mb-1">Consumo Médio</span>
+<span class="font-headline text-xl font-bold">6.2 L/100</span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fcf9f8]/80 dark:bg-[#1b1c1c]/80 backdrop-blur-md shadow-[0_-4px_20px_rgba(76,97,108,0.08)]">
+<!-- Dashboard (Active) -->
+<a class="flex flex-col items-center justify-center text-[#ff6b00] scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="speed" style="font-variation-settings: 'FILL' 1;">speed</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Dashboard</span>
+</a>
+<!-- History -->
+<a class="flex flex-col items-center justify-center text-[#4c616c] opacity-60 hover:text-[#a04100] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="history_edu">history_edu</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Histórico</span>
+</a>
+<!-- Schedule -->
+<a class="flex flex-col items-center justify-center text-[#4c616c] opacity-60 hover:text-[#a04100] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="event_note">event_note</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Agenda</span>
+</a>
+<!-- Specs -->
+<a class="flex flex-col items-center justify-center text-[#4c616c] opacity-60 hover:text-[#a04100] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings_motorcycle">settings</span>
+<span class="font-['Inter'] text-[10px] font-bold uppercase tracking-widest mt-1">Ficha Técnica</span>
+</a>
+</nav>
+</body></html>
