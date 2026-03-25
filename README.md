@@ -33,7 +33,7 @@ Conforme as diretrizes do projeto, este repositório foca em:
 *   **Persistência de Dados:** Armazenamento seguro de todas as informações de revisões e custos.
 *   **Interface UX/UI:** Design intuitivo focado na agilidade do registro de dados pelo motociclista.
 <img width="461" height="1600" alt="screen" src="https://github.com/user-attachments/assets/0439e1b7-4868-408d-abb4-ac2dc506a918" />
-<img width="417" height="1600" alt="screen (2)" src="https://github.com/user-attachments/assets/e93bc690-71da-4f1e-8d6c-eef51ee97d36" />
-<img width="251" height="1600" alt="screen (3)" src="https://github.com/user-attachments/assets/5f696eb0-2909-494f-b2bf-d9386b511986" />
-<img width="354" height="1600" alt="screen (4)" src="https://github.com/user-attachments/assets/4f727ef6-9df3-445a-8201-e903588d7675" />
+<img width="461" height="1600" alt="screen (2)" src="https://github.com/user-attachments/assets/e93bc690-71da-4f1e-8d6c-eef51ee97d36" />
+<img width="461" height="1600" alt="screen (3)" src="https://github.com/user-attachments/assets/5f696eb0-2909-494f-b2bf-d9386b511986" />
+<img width="461" height="1600" alt="screen (4)" src="https://github.com/user-attachments/assets/4f727ef6-9df3-445a-8201-e903588d7675" />
 
