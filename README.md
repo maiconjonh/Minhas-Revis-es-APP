@@ -37,3 +37,91 @@ Conforme as diretrizes do projeto, este repositório foca em:
 <img width="461" height="1600" alt="screen (3)" src="https://github.com/user-attachments/assets/5f696eb0-2909-494f-b2bf-d9386b511986" />
 <img width="461" height="1600" alt="screen (4)" src="https://github.com/user-attachments/assets/4f727ef6-9df3-445a-8201-e903588d7675" />
 
+## 🛠️ Tecnologias Utilizadas
+
+- **React Native** (0.81.5) com **Expo** (~54.0.33)
+- **TypeScript** (~5.9.2)
+- **Expo Router** (~6.0.23) para navegação baseada em arquivos
+- **React Navigation** para navegação nativa
+- **Expo Image Picker** para seleção de imagens
+- **Expo Print** para exportação de PDFs
+- Outras bibliotecas Expo para funcionalidades nativas
+
+## 📦 Instalação
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/seu-usuario/Minhas-Revis-es-APP.git
+   cd Minhas-Revis-es-APP/Motometrics/meu-primeiro-app
+   ```
+
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+## 🚀 Como Executar
+
+- **Iniciar o servidor de desenvolvimento:**
+  ```bash
+  npm start
+  ```
+
+- **Executar no Android:**
+  ```bash
+  npm run android
+  ```
+
+- **Executar no iOS:**
+  ```bash
+  npm run ios
+  ```
+
+- **Executar na Web:**
+  ```bash
+  npm run web
+  ```
+
+Certifique-se de ter o Expo CLI instalado globalmente (`npm install -g @expo/cli`) e um emulador/simulador configurado.
+
+## 📁 Estrutura do Projeto
+
+```
+Motometrics/meu-primeiro-app/
+├── app/                    # Páginas e rotas (Expo Router)
+│   ├── _layout.jsx        # Layout principal
+│   ├── index.jsx          # Tela inicial/Dashboard
+│   ├── abastecer.jsx      # Tela de abastecimento
+│   ├── adicionar.jsx      # Adicionar moto/revisão
+│   ├── cronograma.jsx     # Cronograma de revisões
+│   ├── detalhes.jsx       # Detalhes da moto
+│   ├── historico.jsx      # Histórico de manutenções
+│   ├── revisao.jsx        # Tela de revisão
+│   ├── modal.tsx          # Modal genérico
+│   ├── MotoContext.js     # Contexto para estado da moto
+│   └── NavBar.jsx         # Barra de navegação
+├── components/            # Componentes reutilizáveis
+│   ├── ui/               # Componentes de UI
+│   └── ...
+├── assets/               # Imagens e recursos estáticos
+├── constants/            # Temas e constantes
+├── hooks/                # Hooks customizados
+└── scripts/              # Scripts utilitários
+```
+
+## 🤝 Como Contribuir
+
+1. **Fork** o projeto
+2. Crie uma branch para sua feature: `git checkout -b feature/nova-feature`
+3. Commit suas mudanças: `git commit -m 'Adiciona nova feature'`
+4. Push para a branch: `git push origin feature/nova-feature`
+5. Abra um **Pull Request**
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+**Desenvolvido com ❤️ para motociclistas apaixonados!** 🏍️
+
